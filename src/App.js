@@ -1,24 +1,24 @@
-import logo from './logo.svg';
+import { Container, Row, Col } from 'react-bootstrap';
+import Formcomp from './Components/Formcomp';
+import Phptesttable from './Components/Phptesttable';
+import { Provider } from 'react-redux';
+import store from './store/store'
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <Container fluid="xxl" style={{background: "#343232"}} className='py-4'>
+        <Row>
+          <Col lg={4}>
+            <Formcomp/>
+          </Col>
+          <Col lg={8}>
+            <Phptesttable/>
+          </Col>
+        </Row>
+      </Container>
+    </Provider>
   );
 }
 

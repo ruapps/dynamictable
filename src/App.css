@@ -1,38 +1,51 @@
-.App {
-  text-align: center;
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+form label,
+form h2{
+    color: #fff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+form button{
+  background: #fff !important;
+  color: black !important;
+  border: none !important;
+ }
+
+form button:hover{
+  background: black !important;
+  color: #fff !important;
+ }
+
+ form .prompt{
+  color: red;
+  display: none;
+ }
+
+ form .prompt.active{
+  display: block;
+ }
+
+.tabParent{
+    overflow-x: scroll;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.tabParent table thead th,
+.tabParent table tbody td{vertical-align: middle; padding: 1rem}
+.tabParent table thead th{text-align: center; font-size: 0.8rem; color: #fff;}
+.tabParent table tbody td{text-align: center; font-size: 0.7rem;}
+.tabParent table tbody tr img{cursor: pointer;}
+
+.tabParent::-webkit-scrollbar {
+  width: 10px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.tabParent::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+  background-color: #737272;
+  border: 1px solid #000;
 }
